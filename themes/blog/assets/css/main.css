@@ -1,0 +1,169 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2b2b2b;
+  color: #000;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #0066bb;
+  text-decoration: underline;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #2b2b2b;
+    color: #a9b7c6;
+  }
+
+  a {
+    color: #589df6;
+  }
+}
+
+/* Font styles */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2'),
+       url('../fonts/jetbrains-mono/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tags */
+
+.tags-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Chrome styles */
+.chroma {
+  background-color: #f0f0f0; /* Light theme background */
+  color: #2b2b2b;            /* Light theme text */
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  tab-size: 4;
+}
+
+/* Keywords */
+.chroma .kd,
+.chroma .kx {
+  color: #aa6900; /* Orange */
+  font-weight: 600;
+}
+
+/* Comments */
+.chroma .c1,
+.chroma .cm {
+  color: #808080; /* Gray */
+  font-style: italic;
+}
+
+/* Strings */
+.chroma .s2,
+.chroma .sb,
+.chroma .sc {
+  color: #007d00; /* Green */
+}
+
+/* Numbers */
+.chroma .mi,
+.chroma .mf,
+.chroma .mh {
+  color: #0000ff; /* Blue */
+}
+
+/* Functions */
+.chroma .fm {
+  color: #0000ff; /* Blue */
+}
+
+/* Types */
+.chroma .kt,
+.chroma .nc {
+  color: #a90d91; /* Purple */
+}
+
+/* Operators */
+.chroma .op {
+  color: #3f3f3f; /* Dark gray */
+}
+
+/* Punctuation */
+.chroma .p {
+  color: #2b2b2b; /* Default text color */
+}
+
+/* Whitespace */
+.chroma .w {
+  color: inherit;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .chroma {
+    background-color: #313335; /* Darcula background */
+    color: #a9b7c6;            /* Darcula text */
+    border: 1px solid #45494a;
+  }
+  .chroma .kd,
+  .chroma .kx {
+    color: #cc7832; /* Orange */
+    font-weight: 600;
+  }
+  .chroma .c1,
+  .chroma .cm {
+    color: #808080; /* Gray */
+    font-style: italic;
+  }
+  .chroma .s2,
+  .chroma .sb,
+  .chroma .sc {
+    color: #6a8759; /* Green */
+  }
+  .chroma .mi,
+  .chroma .mf,
+  .chroma .mh {
+    color: #6897bb; /* Blue */
+  }
+  .chroma .fm {
+    color: #629755; /* Light green */
+  }
+  .chroma .kt,
+  .chroma .nc {
+    color: #9876aa; /* Purple */
+  }
+  .chroma .op {
+    color: #a9b7c6; /* Light gray */
+  }
+  .chroma .p {
+    color: #a9b7c6;
+  }
+  .chroma .w {
+    color: inherit;
+  }
+}

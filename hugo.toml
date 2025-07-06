@@ -1,0 +1,12 @@
+baseURL = 'https://rjma.dev/'
+languageCode = 'en-us'
+title = 'Blog'
+theme = 'blog'
+
+[permalinks]
+posts = "/posts/:slug/"
+
+[markup]
+  [markup.highlight]
+    noClasses = false          # Use CSS classes, not inline styles
+    lineNos = false            # Enable line numbers? (optional)
