@@ -1,6 +1,6 @@
 baseURL = 'https://rjma.dev/'
 languageCode = 'en-us'
-title = 'Blog'
+title = 'rjma'
 theme = 'blog'
 
 [permalinks]
