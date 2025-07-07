@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
-  <title>rjma</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>~{{ if not .IsHome }}{{ .RelPermalink }}{{ end }}</title>
   {{ partialCached "head/css.html" . }}
 </head>
 <body>
   <header>
-    <h1><a href="{{ .Site.BaseURL }}">{{ site.Title }}</a></h1>
+    <h1 class="terminal-title">
+      <a href="{{ .Site.BaseURL }}"><span class="terminal-userhost">guest@rjma.dev</span></a>:<span class="terminal-path">~{{ if not .IsHome }}{{ .RelPermalink }}{{ end }}</span>$ {{ if .IsPage }}cat{{ else }}ls{{ end }}
+    </h1>
   </header>
   <main>
     {{ block "main" . }}{{ end }}
