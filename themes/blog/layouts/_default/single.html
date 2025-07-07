@@ -1,8 +1,7 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ partial "date.html" . }}
+    <h1>{{ .Title }}</h1>
 
-  {{ partial "date.html" . }}
-
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ .Content }}
 {{ end }}

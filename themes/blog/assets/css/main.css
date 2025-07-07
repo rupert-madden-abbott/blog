@@ -7,10 +7,9 @@
 
 body {
     background: #2b2b2b;
-    color: #000;
+    color: #a9b7c6;
     font-family: system-ui, sans-serif;
     line-height: 1.5;
-
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -18,20 +17,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #0066bb;
+    color: #589df6;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
     text-decoration: underline;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #2b2b2b;
-        color: #a9b7c6;
-    }
-
-    a {
-        color: #589df6;
-    }
+a:visited {
+    color: #c586c0;
 }
 
 /* Font styles */
@@ -73,10 +68,6 @@ header {
     color: #cccccc;
 }
 
-.terminal-title a {
-    text-decoration: none;
-}
-
 .terminal-userhost {
     color: #4E9A06;
 }
@@ -85,9 +76,26 @@ header {
     color: #3465A4;
 }
 
+.post-listing {
+    margin-bottom: 2rem;
+}
+
+.post-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 3ch;
+    flex-wrap: wrap;
+}
+
+.post-date {
+    font-size: 0.875rem;
+    color: #888;
+    font-family: 'JetBrains Mono', monospace;
+}
+
 /* Tags */
 
-.tags-list {
+.tags ul {
     display: flex;
     gap: 1rem;
     list-style: none;
@@ -95,11 +103,11 @@ header {
     margin: 0;
 }
 
-
 /* Chrome styles */
 .chroma {
-    background-color: #f0f0f0; /* Light theme background */
-    color: #2b2b2b; /* Light theme text */
+    background-color: #313335; /* Darcula background */
+    color: #a9b7c6; /* Darcula text */
+    border: 1px solid #45494a;
     padding: 1em;
     border-radius: 4px;
     overflow-x: auto;
@@ -107,12 +115,13 @@ header {
     font-size: 0.9rem;
     line-height: 1.4;
     tab-size: 4;
+    margin-bottom: 1rem;
 }
 
 /* Keywords */
 .chroma .kd,
 .chroma .kx {
-    color: #aa6900; /* Orange */
+    color: #cc7832;
     font-weight: 600;
 }
 
@@ -127,92 +136,37 @@ header {
 .chroma .s2,
 .chroma .sb,
 .chroma .sc {
-    color: #007d00; /* Green */
+    color: #6a8759; /* Green */
 }
 
 /* Numbers */
 .chroma .mi,
 .chroma .mf,
 .chroma .mh {
-    color: #0000ff; /* Blue */
+    color: #6897bb; /* Blue */
 }
 
 /* Functions */
 .chroma .fm {
-    color: #0000ff; /* Blue */
+    color: #629755; /* Light green */
 }
 
 /* Types */
 .chroma .kt,
 .chroma .nc {
-    color: #a90d91; /* Purple */
+    color: #9876aa; /* Purple */
 }
 
 /* Operators */
 .chroma .op {
-    color: #3f3f3f; /* Dark gray */
+    color: #a9b7c6; /* Light gray */
 }
 
 /* Punctuation */
 .chroma .p {
-    color: #2b2b2b; /* Default text color */
+    color: #a9b7c6;
 }
-
-/* Whitespace */
-.chroma .w {
-    color: inherit;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    .chroma {
-        background-color: #313335; /* Darcula background */
-        color: #a9b7c6; /* Darcula text */
-        border: 1px solid #45494a;
-    }
-
-    .chroma .kd,
-    .chroma .kx {
-        color: #cc7832; /* Orange */
-        font-weight: 600;
-    }
-
-    .chroma .c1,
-    .chroma .cm {
-        color: #808080; /* Gray */
-        font-style: italic;
-    }
-
-    .chroma .s2,
-    .chroma .sb,
-    .chroma .sc {
-        color: #6a8759; /* Green */
-    }
-
-    .chroma .mi,
-    .chroma .mf,
-    .chroma .mh {
-        color: #6897bb; /* Blue */
-    }
-
-    .chroma .fm {
-        color: #629755; /* Light green */
-    }
-
-    .chroma .kt,
-    .chroma .nc {
-        color: #9876aa; /* Purple */
-    }
-
-    .chroma .op {
-        color: #a9b7c6; /* Light gray */
-    }
-
-    .chroma .p {
-        color: #a9b7c6;
-    }
 
     .chroma .w {
         color: inherit;
     }
-}
