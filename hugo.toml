@@ -1,4 +1,4 @@
-baseURL = 'https://rjma.dev/'
+baseURL = 'https://blog.rjma.dev/'
 languageCode = 'en-us'
 title = 'rjma'
 theme = 'blog'
