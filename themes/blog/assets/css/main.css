@@ -1,24 +1,16 @@
-/* Reset & base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    color: #a9b7c6;
 }
 
 body {
     background: #2b2b2b;
-    color: #a9b7c6;
+
     font-family: system-ui, sans-serif;
     line-height: 1.5;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
-}
-
 a {
     color: #589df6;
-    text-decoration: none;
 }
 
 a:hover, a:focus {
